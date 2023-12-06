@@ -45,8 +45,7 @@ messageForm.addEventListener('submit', (e) => {
     const messageSection = document.getElementById('messages');
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
-    //newMessage.innerText = textName;
-   // messageList.appendChild(newMessage);
+
 
     const mail = document.createElement('a');
     mail.href = 'mailto:' + textEmail;
@@ -59,24 +58,20 @@ messageForm.addEventListener('submit', (e) => {
     messageList.appendChild(newMessage);
     messageList.appendChild(span);
 
-
-    //const editButton = document.createElement('button');
-    //editButton.innerText = 'edit';
-    //editButton.type = 'edit';
-   // messageList.appendChild(editButton);
-    
+    //creating buttons
 
     const removeButton = document.createElement('button');
     removeButton.innerText = 'remove';
     removeButton.type = 'button';
     messageList.appendChild(removeButton);
-    //newMessage.appendChild(removeButton);
+
 
     removeButton.addEventListener('click', () => {
         const entry = removeButton.parentNode;
         entry.remove();
     });
 
+    
 
     
 

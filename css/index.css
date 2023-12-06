@@ -1,0 +1,57 @@
+body {
+    background-color: #addca2;
+    font-family: 'Montserrat', sans-serif;
+    color: #573f67;
+    padding: 1rem;
+    margin: 1 rem;
+}
+
+#my-name {
+    text-align: center;
+}
+
+h1, h2 {
+    font-size: 25px bold;
+    font-weight: bolder;
+    color:#155263;
+}
+
+li {
+    display: block;
+}
+
+label {
+    font-size: 15px;
+    color: #573f67;
+}
+
+input, textarea {
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 3px;
+}
+
+button[type=submit] {
+    background-color:#573f67;
+    color: #fafafa;
+    font-size: 15px;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 12px 0;
+}
+
+#messages li {
+    background-color: #155263;
+}
+
+a {
+    color: #900048;
+}
+
+footer {
+    background-color: #fafafa;
+    font-size: 13px;
+    text-align: center;
+}
