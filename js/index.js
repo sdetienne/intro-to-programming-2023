@@ -35,7 +35,7 @@ messageForm.addEventListener('submit', (e) => {
     const email = form.usersEmail;
     const message = form.usersMessage;
     e.preventDefault();//so everything does not disappear when you press submit.
-    const textName = name.value;
+    const textName = name.value + ': ';
     console.log(textName);
     const textEmail = email.value;
     console.log(textEmail);
@@ -56,14 +56,14 @@ messageForm.addEventListener('submit', (e) => {
 
     newMessage.appendChild(mail);
     messageList.appendChild(newMessage);
-    messageList.appendChild(span);
+    newMessage.appendChild(span);
 
     //creating buttons
 
     const removeButton = document.createElement('button');
     removeButton.innerText = 'remove';
     removeButton.type = 'button';
-    messageList.appendChild(removeButton);
+    newMessage.appendChild(removeButton);
 
 
     removeButton.addEventListener('click', () => {
