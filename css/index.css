@@ -1,13 +1,19 @@
 body {
     background-color: #addca2;
-    font-family: 'Montserrat', sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: #573f67;
     padding: 1rem;
     margin: 1 rem;
 }
 
-#my-name {
+header {
     text-align: center;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 h1, h2 {
@@ -15,6 +21,7 @@ h1, h2 {
     font-weight: bolder;
     color:#155263;
 }
+
 
 li {
     display: block;
@@ -55,3 +62,18 @@ footer {
     font-size: 13px;
     text-align: center;
 }
+
+
+@media (min-width: 1625px){
+    body {
+      background-color: #ccb4c0;
+  }
+  }
+
+
+@media (min-width: 305px) and (max-width: 800px) {
+    body {
+      background-color: rgb(221, 223, 146);
+
+  }
+  }
