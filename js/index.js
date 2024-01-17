@@ -42,8 +42,8 @@ messageForm.addEventListener('submit', (e) => {
     const textMessage = message.value;
     console.log(textMessage);
 
-    const messageSection = document.getElementById('messages');
-    const messageList = messageSection.querySelector('ul');
+    //const messageSection = document.getElementById('messages');
+    const messageList = document.getElementById('message-list')
     const newMessage = document.createElement('li');
 
 
@@ -78,18 +78,18 @@ messageForm.addEventListener('submit', (e) => {
 
 
 
-const githubRequest = new XMLHttpRequest();
+//const githubRequest = new XMLHttpRequest();
 
-githubRequest.open('GET', 'https://api.github.com/users/sdetienne/repos');
-githubRequest.send();
+//githubRequest.open('GET', 'https://api.github.com/users/sdetienne/repos');
+//githubRequest.send();
 
 const projectSelection = document.getElementById("projects");
 const projectList = projectSelection.querySelector('ul');
     
 
 
-githubRequest.addEventListener('load', function() {
-    var repositories = JSON.parse(this.responseText);
+/*githubRequest.addEventListener('load', function() {
+    const repositories = JSON.parse(this.responseText);
 
     console.log(repositories);
 
@@ -101,4 +101,20 @@ githubRequest.addEventListener('load', function() {
     }
 }
     
-);
+);*/
+
+
+fetch('https://api.github.com/users/sdetienne/repos')
+    .then(response => response.json())
+    .then(repositories => {
+        for (let i = 0; i < repositories.length; i++){
+            const project = document.createElement('li');
+            project.innerText = repositories[i].name;
+            projectList.appendChild(project);
+        
+        }
+
+    })
+
+
+
