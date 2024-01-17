@@ -12,8 +12,23 @@ header {
 
 .main-nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+}
+
+nav a {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+
+
+}
+
+nav a:hover {
+    color:black;
+
+    
 }
 
 h1, h2 {
