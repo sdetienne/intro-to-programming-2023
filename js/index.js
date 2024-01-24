@@ -20,6 +20,8 @@ var skillsSection = document.getElementById('skills');
 
 var skillsList = skillsSection.querySelector('ul');
 
+skillsList.style.display = 'grid';
+skillsList.style.gridTemplateColumns = 'repeat(2, 1fr)';
 
 
 for (let i = 0; i < skills.length; i++) { //for loop iterating for skills array. need the length of array
@@ -76,8 +78,6 @@ messageForm.addEventListener('submit', (e) => {
 
 
 
-
-
 //const githubRequest = new XMLHttpRequest();
 
 //githubRequest.open('GET', 'https://api.github.com/users/sdetienne/repos');
@@ -107,6 +107,10 @@ const projectList = projectSelection.querySelector('ul');
 fetch('https://api.github.com/users/sdetienne/repos')
     .then(response => response.json())
     .then(repositories => {
+
+        projectList.style.display = 'grid';
+        projectList.style.gridTemplateColumns = 'repeat(3, 1fr)'; // Three columns with equal width
+
         for (let i = 0; i < repositories.length; i++){
             const project = document.createElement('li');
             project.innerText = repositories[i].name;
